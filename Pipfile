@@ -1,0 +1,20 @@
+[dev-packages]
+pytest = "*"
+mock = "*"
+responses = "*"
+pytest-dotenv = "*"
+coverage = "*"
+gitchangelog = "*"
+
+[packages]
+python-decouple = "*"
+ujson = "*"
+elastic-apm = "*"
+supervisor = "*"
+py-healthcheck= "*"
+flask = "*"
+requests = "*"
+pika = "*"
+
+[requires]
+python_version = "3.8"

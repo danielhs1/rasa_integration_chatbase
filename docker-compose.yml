@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  rabbit:
+    container_name: rabbit
+    restart: always
+    image: "bitnami/rabbitmq:3.8.3"
+    environment:
+      RABBITMQ_HOST: "rabbit"
+      RABBITMQ_USERNAME: "user"
+      RABBITMQ_PASSWORD: "abc123"
+      RABBITMQ_DISK_FREE_LIMIT: "{mem_relative, 0.3}"
+    ports:
+      - "5672:5672"
+      - "4369:4369"
+      - "15672:15672"
+      - "25672:25672"
+    networks:
+      - default
+
+networks:
+  default:
+    driver: bridge
